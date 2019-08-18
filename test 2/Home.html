@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <h1>Super Bate-Papo UOL </h1>
+        <script src = "/socket.io/socket.io.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <div id = 'idDaPessoa'></div>
+        <button size = 20 onclick = "EscolherNome()">(Escolher Nome)</button>
+        <script>
+            function EscolherNome(){
+                window.location.replace('/nome');
+            }
+            const socket = io();   
+        </script>
+    </body>
+</html>

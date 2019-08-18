@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <h1>Digite o seu nome </h1>
+        <script src = "/socket.io/socket.io.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <input type= "text"/>
+        <div id = 'idDaPessoa'></div>
+        <script>
+            const socket = io();
+            socket.on('connect' , ()=>{
+                $('#idDaPessoa').append("Digite o seu nome e aperte enter ;D")
+            })
+
+        $(function(){
+            $("input").keydown(function(key){
+                if(key.keyCode === 13){
+                    sessionStorage.setItem('name1', ($(this).val()));
+                    
+
+                    $(this).val('')
+                    window.location.replace('/chat')
+                }
+            })
+        })
+        
+        
+        </script>
+    </body>
+</html>
